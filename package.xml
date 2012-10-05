@@ -33,68 +33,38 @@
    <dir name="Bytekit">
     <dir name="Scanner">
      <dir name="Rule">
-      <file baseinstalldir="/" name="DisallowedOpcodes.php" role="php">
-       <tasks:replace from="@package_version@" to="version" type="package-info" />
-      </file>
-      <file baseinstalldir="/" name="DirectOutput.php" role="php">
-       <tasks:replace from="@package_version@" to="version" type="package-info" />
-      </file>
-      <file baseinstalldir="/" name="Output.php" role="php">
-       <tasks:replace from="@package_version@" to="version" type="package-info" />
-      </file>
-      <file baseinstalldir="/" name="ZendView.php" role="php">
-       <tasks:replace from="@package_version@" to="version" type="package-info" />
-      </file>
+      <file baseinstalldir="/" name="DisallowedOpcodes.php" role="php" />
+      <file baseinstalldir="/" name="DirectOutput.php" role="php" />
+      <file baseinstalldir="/" name="Output.php" role="php" />
+      <file baseinstalldir="/" name="ZendView.php" role="php" />
      </dir>
-     <file baseinstalldir="/" name="Rule.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
+     <file baseinstalldir="/" name="Rule.php" role="php" />
     </dir>
     <dir name="TextUI">
      <dir name="ResultFormatter">
       <dir name="Disassembler">
-       <file baseinstalldir="/" name="Graph.php" role="php">
-        <tasks:replace from="@package_version@" to="version" type="package-info" />
-       </file>
-       <file baseinstalldir="/" name="Text.php" role="php">
-        <tasks:replace from="@package_version@" to="version" type="package-info" />
-       </file>
+       <file baseinstalldir="/" name="Graph.php" role="php" />
+       <file baseinstalldir="/" name="Text.php" role="php" />
       </dir>
       <dir name="Scanner">
-       <file baseinstalldir="/" name="Text.php" role="php">
-        <tasks:replace from="@package_version@" to="version" type="package-info" />
-       </file>
-       <file baseinstalldir="/" name="XML.php" role="php">
-        <tasks:replace from="@package_version@" to="version" type="package-info" />
-       </file>
+       <file baseinstalldir="/" name="Text.php" role="php" />
+       <file baseinstalldir="/" name="XML.php" role="php" />
       </dir>
      </dir>
-     <file baseinstalldir="/" name="Command.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
+     <file baseinstalldir="/" name="Command.php" role="php" />
     </dir>
-    <file baseinstalldir="/" name="Autoload.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="/" name="Disassembler.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="/" name="Scanner.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="/" name="Util.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
+    <file baseinstalldir="/" name="Autoload.php" role="php" />
+    <file baseinstalldir="/" name="Disassembler.php" role="php" />
+    <file baseinstalldir="/" name="Scanner.php" role="php" />
+    <file baseinstalldir="/" name="Util.php" role="php" />
    </dir>
    <file baseinstalldir="/" name="bytekit.php" role="script">
     <tasks:replace from="/usr/bin/env php" to="php_bin" type="pear-config"/>
     <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
-    <tasks:replace from="@package_version@" to="version" type="package-info" />
    </file>
    <file baseinstalldir="/" name="bytekit.bat" role="script">
     <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
     <tasks:replace from="@bin_dir@" to="bin_dir" type="pear-config" />
-    <tasks:replace from="@package_version@" to="version" type="package-info" />
    </file>
   </dir>
  </contents>
