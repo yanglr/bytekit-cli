@@ -38,76 +38,47 @@
  * @author    Sebastian Bergmann <sb@sebastian-bergmann.de>
  * @copyright 2009-2012 Sebastian Bergmann <sb@sebastian-bergmann.de>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
- * @since     File available since Release 1.0.0
+ * @since     File available since Release 1.1.4
  */
 
 /**
- * PMD XML formatter for result sets from Bytekit_Scanner::scan().
- *
  * @author    Sebastian Bergmann <sb@sebastian-bergmann.de>
  * @copyright 2009-2012 Sebastian Bergmann <sb@sebastian-bergmann.de>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  * @link      http://github.com/sebastianbergmann/bytekit-cli/tree
- * @since     Class available since Release 1.0.0
+ * @since     Class available since Release 1.1.4
  */
-class Bytekit_TextUI_ResultFormatter_Scanner_XML
+class Bytekit_Version
 {
+    const VERSION = '1.1.3';
+    protected static $version;
+
     /**
-     * Formats a result set from Bytekit_Scanner::scan() as PMD XML.
-     *
-     * @param  array $result
      * @return string
      */
-    public function formatResult(array $result)
+    public static function id()
     {
-        $document = new DOMDocument('1.0', 'UTF-8');
-        $document->formatOutput = TRUE;
+        if (self::$version === NULL) {
+            self::$version = self::VERSION;
 
-        $pmd = $document->createElement('pmd');
-        $pmd->setAttribute('version', 'bytekit-cli ' . Bytekit_Version::id());
-        $document->appendChild($pmd);
+            if (is_dir(dirname(__DIR__) . '/.git')) {
+                $dir = getcwd();
+                chdir(__DIR__);
+                $version = exec('git describe --tags');
+                chdir($dir);
 
-        foreach ($result as $file => $items) {
-            $xmlFile = $document->createElement('file');
-            $xmlFile->setAttribute('name', $file);
-            $pmd->appendChild($xmlFile);
+                if ($version) {
+                    if (count(explode('.', self::VERSION)) == 3) {
+                        self::$version = $version;
+                    } else {
+                        $version = explode('-', $version);
 
-            foreach ($items as $item) {
-                $namespace = FALSE;
-                $class     = FALSE;
-                $tmp       = explode('\\', $item['function']);
-                $function  = array_pop($tmp);
-
-                if (!empty($tmp)) {
-                    $namespace = join('\\', $tmp);
+                        self::$version = self::VERSION . '-' . $version[2];
+                    }
                 }
-
-                $_function = explode('::', $function);
-                $function  = array_pop($_function);
-
-                if (!empty($_function)) {
-                    $class = $_function[0];
-                }
-
-                $xmlViolation = $document->createElement('violation');
-                $xmlViolation->setAttribute('rule', $item['message']);
-                $xmlViolation->setAttribute('line', $item['line']);
-
-                if ($namespace) {
-                    $xmlViolation->setAttribute('package', $namespace);
-                }
-
-                if ($class) {
-                    $xmlViolation->setAttribute('class', $class);
-                    $xmlViolation->setAttribute('method', $function);
-                } else {
-                    $xmlViolation->setAttribute('function', $function);
-                }
-
-                $xmlFile->appendChild($xmlViolation);
             }
         }
 
-        return $document->saveXML();
+        return self::$version;
     }
 }

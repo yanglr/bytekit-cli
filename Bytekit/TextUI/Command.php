@@ -320,6 +320,9 @@ EOT;
      */
     protected function printVersionString()
     {
+        printf(
+          "bytekit-cli %s by Sebastian Bergmann.\n\n", Bytekit_Version::id()
+        );
     }
 
     /**

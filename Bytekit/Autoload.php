@@ -70,7 +70,8 @@ spl_autoload_register(
               'bytekit_textui_resultformatter_disassembler_text' => '/TextUI/ResultFormatter/Disassembler/Text.php',
               'bytekit_textui_resultformatter_scanner_text' => '/TextUI/ResultFormatter/Scanner/Text.php',
               'bytekit_textui_resultformatter_scanner_xml' => '/TextUI/ResultFormatter/Scanner/XML.php',
-              'bytekit_util' => '/Util.php'
+              'bytekit_util' => '/Util.php',
+              'bytekit_version' => '/Version.php'
             );
         }
 
