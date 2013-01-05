@@ -57,6 +57,7 @@
     <file baseinstalldir="/" name="Disassembler.php" role="php" />
     <file baseinstalldir="/" name="Scanner.php" role="php" />
     <file baseinstalldir="/" name="Util.php" role="php" />
+    <file baseinstalldir="/" name="Version.php" role="php" />
    </dir>
    <file baseinstalldir="/" name="bytekit.php" role="script">
     <tasks:replace from="/usr/bin/env php" to="php_bin" type="pear-config"/>
@@ -76,11 +77,6 @@
    <pearinstaller>
     <min>1.9.4</min>
    </pearinstaller>
-   <package>
-    <name>Version</name>
-    <channel>pear.phpunit.de</channel>
-    <min>1.0.0</min>
-   </package>
    <package>
     <name>Finder</name>
     <channel>pear.symfony.com</channel>
