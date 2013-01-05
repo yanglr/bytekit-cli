@@ -51,6 +51,7 @@ require_once 'Symfony/Component/Finder/Iterator/RecursiveDirectoryIterator.php';
 require_once 'Symfony/Component/Finder/Iterator/ExcludeDirectoryFilterIterator.php';
 require_once 'Symfony/Component/Finder/SplFileInfo.php';
 require_once 'ezc/Base/base.php';
+require_once 'SebastianBergmann/Version/autoload.php';
 
 spl_autoload_register(
     function($class) {
@@ -70,8 +71,7 @@ spl_autoload_register(
               'bytekit_textui_resultformatter_disassembler_text' => '/TextUI/ResultFormatter/Disassembler/Text.php',
               'bytekit_textui_resultformatter_scanner_text' => '/TextUI/ResultFormatter/Scanner/Text.php',
               'bytekit_textui_resultformatter_scanner_xml' => '/TextUI/ResultFormatter/Scanner/XML.php',
-              'bytekit_util' => '/Util.php',
-              'bytekit_version' => '/Version.php'
+              'bytekit_util' => '/Util.php'
             );
         }
 

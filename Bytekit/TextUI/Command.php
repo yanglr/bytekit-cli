@@ -320,8 +320,11 @@ EOT;
      */
     protected function printVersionString()
     {
+        $version = new SebastianBergmann\Version;
+
         printf(
-          "bytekit-cli %s by Sebastian Bergmann.\n\n", Bytekit_Version::id()
+          "bytekit-cli %s by Sebastian Bergmann.\n\n",
+          $version->getVersion('1.1.3', __DIR__)
         );
     }
 
