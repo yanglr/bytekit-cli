@@ -52,6 +52,14 @@
  */
 class Bytekit_TextUI_Command
 {
+    private $version;
+
+    public function __construct()
+    {
+        $version = new SebastianBergmann\Version('1.1.3', __DIR__);
+        $this->version = $version->getVersion();
+    }
+
     /**
      * Main method.
      */
@@ -321,7 +329,7 @@ EOT;
     protected function printVersionString()
     {
         printf(
-          "bytekit-cli %s by Sebastian Bergmann.\n\n", Bytekit_Version::id()
+          "bytekit-cli %s by Sebastian Bergmann.\n\n", $this->version
         );
     }
 
