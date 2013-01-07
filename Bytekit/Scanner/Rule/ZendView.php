@@ -2,7 +2,7 @@
 /**
  * bytekit-cli
  *
- * Copyright (c) 2009-2013, Sebastian Bergmann <sb@sebastian-bergmann.de>.
+ * Copyright (c) 2009-2013, Sebastian Bergmann <sebastian@phpunit.de>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -35,9 +35,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @package   Bytekit
- * @author    Sebastian Bergmann <sb@sebastian-bergmann.de>, Lars Strojny <lstrojny@php.net>
+ * @author    Sebastian Bergmann <sebastian@phpunit.de>, Lars Strojny <lstrojny@php.net>
  * @author    Lars Strojny <lstrojny@php.net>
- * @copyright 2009-2013 Sebastian Bergmann <sb@sebastian-bergmann.de>
+ * @copyright 2009-2013 Sebastian Bergmann <sebastian@phpunit.de>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  * @since     File available since Release 1.0.0
  */
@@ -45,9 +45,9 @@
 /**
  * Scans for attributes that are not safe-guarded by Zend_View::escape().
  *
- * @author    Sebastian Bergmann <sb@sebastian-bergmann.de>, Lars Strojny <lstrojny@php.net>
+ * @author    Sebastian Bergmann <sebastian@phpunit.de>, Lars Strojny <lstrojny@php.net>
  * @author    Lars Strojny <lstrojny@php.net>
- * @copyright 2009-2013 Sebastian Bergmann <sb@sebastian-bergmann.de>
+ * @copyright 2009-2013 Sebastian Bergmann <sebastian@phpunit.de>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  * @link      http://github.com/sebastianbergmann/bytekit-cli/tree
  * @since     Class available since Release 1.0.0
