@@ -15,7 +15,7 @@ Depending on your OS distribution and/or your PHP environment, you may need to i
 The following two commands (which you may have to run as `root`) are all that is required to install `bytekit` using the PEAR Installer:
 
     pear config-set auto_discover 1
-    pear install pear.phpunit.de/hphpa
+    pear install pear.phpunit.de/bytekit
 
 After the installation you can find the `bytekit` source files inside your local PEAR directory; the path is usually `/usr/lib/php/Bytekit`.
 
